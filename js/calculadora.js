@@ -1,5 +1,5 @@
 document.getElementById('calculateButton').addEventListener('click', function () {
-    // Recupera os valores do formulário
+    // Valores do formulário
     const fullName = document.getElementById('fullName').value;
     const birthdate = document.getElementById('birthdate').value;
     const deathdate = document.getElementById('deathdate').value;
@@ -14,7 +14,7 @@ document.getElementById('calculateButton').addEventListener('click', function ()
     const birthDate = new Date(birthdate);
     const currentDate = new Date();
 
-    // Verifica se a data de nascimento é válida (não é no futuro)
+    // Verifica se a data de nascimento é válida 
     if (birthDate > currentDate) {
         alert("A data de nascimento não pode ser no futuro.");
         return;
@@ -26,8 +26,8 @@ document.getElementById('calculateButton').addEventListener('click', function ()
     // Converte a diferença para dias, semanas, meses e anos
     const millisecondsPerDay = 1000 * 60 * 60 * 24;
     const millisecondsPerWeek = millisecondsPerDay * 7;
-    const millisecondsPerMonth = millisecondsPerDay * 30.4375; // Média de dias por mês
-    const millisecondsPerYear = millisecondsPerDay * 365.25; // Considerando anos bissextos
+    const millisecondsPerMonth = millisecondsPerDay * 30.4375;
+    const millisecondsPerYear = millisecondsPerDay * 365.25; 
 
     const ageInDays = Math.floor(differenceInMilliseconds / millisecondsPerDay);
     const ageInWeeks = Math.floor(differenceInMilliseconds / millisecondsPerWeek);
